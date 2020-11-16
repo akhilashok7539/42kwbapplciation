@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12" style="margin-top: 100px;text-align: center;">
+            <h1>Projects</h1>
+            <hr>
+
+            <br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <select class="form-control" [(ngModel)]="location" (change)="selectedevent(location)">
+                <option value="">Filter</option>
+                    <option value="{{s.id}}" *ngFor="let s of locations">{{s.location}}</option>
+            </select>
+
+        </div>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="search here" [(ngModel)]="searchString">
+
+        </div>
+    </div>
+    <br>
+    <div class="row">
+
+        <div class="col-sm-3" *ngFor="let a of results | filter : 'title' : searchString; let i = index ">
+            <div class="card" (click)="select(a)">
+                <img src="{{BASEURL}}/admin/advertisement/{{a.fileName}}" alt="" style="height: 164px;">
+                <h3>{{a.title}}</h3>
+                <p>{{a.discription}}</p>
+                <p>Start Price {{a.startingPrize}} End Price {{a.endPrize}} </p>
+                <p>Location :{{a.location}}</p>
+
+            </div>
+
+        </div>
+        <p *ngIf="mesg == 'no data found'" style="margin: 0 auto;font-size: 30px;">No Properties Found</p>
+
+    </div>
+</div>

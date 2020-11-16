@@ -1,0 +1,36 @@
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 50%;
+    left: 15%;
+    z-index: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+p {
+    text-align: left;
+    color: black;
+    font-size: 18px;
+}
+
+h2 {
+    text-align: left;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.btn-primary {
+    float: left;
+    border-radius: 0;
+    background: none;
+}
+
+.btn-primary:hover {
+    background: #0d1128 !important;
+    color: white;
+    border: none;
+}

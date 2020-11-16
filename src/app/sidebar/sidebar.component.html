@@ -1,0 +1,60 @@
+<!-- <mat-sidenav-container>
+    <mat-sidenav  mode="side" opened="true" [fixedInViewport]="true" [fixedTopGap]="64">
+                <ul>
+                    <li routerLink="/admin" routerLinkActive="active">Home</li>
+                    
+                    <li *ngIf="userRole == 'ADMIN'" routerLink="/countries" routerLinkActive="active">Countries</li>
+
+                </ul>
+      </mat-sidenav>
+  
+ </mat-sidenav-container> -->
+
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-inner slimscroll" style="overflow-y: auto;">
+        <div id="sidebar-menu" class="sidebar-menu">
+
+            <ul>
+                <img src="assets/img/logoos.png" alt="" style="    display: block;
+                width: 52%;
+                margin: 0 auto;
+                padding-top: 32px;">
+                <li class="menu-title" style="text-align: center;"> <strong> ADMIN</strong></li>
+                <li routerLinkActive="active">
+                    <a routerLink="/admin"><i class="fa fa-user-md"></i> <span>Home</span></a>
+                </li>
+                <li routerLinkActive="active">
+                    <a routerLink="/location"><i class="fa fa-user-md"></i> <span>Location</span></a>
+                </li>
+                <!-- <li routerLinkActive="active">
+                    <a routerLink ="/items"><i class="fa fa-user-md"></i> <span>Vehicles</span></a>
+                </li>
+           
+             
+                <li routerLinkActive="active">
+                    <a routerLink ="/booking-customers"><i class="fa fa-user-md"></i> <span>Drivers  </span></a>
+                </li>
+               
+                <li routerLinkActive="active">
+                    <a  routerLink ="/admin-deliveryBoys"><i class="fa fa-user-md"></i> <span>Vehicle Tracking</span></a>
+                </li>
+              
+                <li routerLinkActive="active">
+                    <a routerLink ="/booking-history"><i class="fa fa-user-md"></i> <span>Payment reports</span></a>
+                </li>
+              
+                <li routerLinkActive="active">
+                    <a routerLink ="/item-rating"><i class="fa fa-user-md"></i> <span>  Bank manage</span></a>
+                </li>  -->
+
+                <!-- <li routerLinkActive="active">
+                    <a routerLink ="/item-rating"><i class="fa fa-user-md"></i> <span>Profile</span></a>
+                </li>  -->
+
+                <!-- <li routerLinkActive="active">
+                    <a routerLink ="/booking-history"><i class="fa fa-user-md"></i> <span>Change password</span></a>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+</div>

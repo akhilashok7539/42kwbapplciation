@@ -1,0 +1,26 @@
+<header id="header-area" class="fixed-top">
+
+
+    <ul>
+        <!-- <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li> -->
+        <li style="float:right"><a class="active" href="#about">Logout</a></li>
+    </ul>
+
+</header>
+
+
+<div class="page-wrapper">
+    <div class="container">
+        <!-- <span class="close">X</span> -->
+        <div class="card">
+
+            <h4 style="text-align: center; font-size: 20px;font-weight: bold;">Add Location</h4>
+
+            <label>Location</label>
+            <input type="text" [(ngModel)]="location" class="form-control" placeholder="enter your location">
+            <button class="btn" (click)="submit()">Submit</button>
+        </div>
+    </div>
+</div>

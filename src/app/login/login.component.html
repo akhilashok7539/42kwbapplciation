@@ -1,0 +1,35 @@
+<app-header></app-header>
+
+
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row d-flex">
+
+            <div class="col-md-12 wrap-about pr-md-4 ">
+
+                <h2 class="mb-4" style="text-align: center; font-size: 30px;font-weight: bold;">Welcome</h2>
+
+                <div class="row mt-12">
+                    <!-- <div class="col-lg-4"> -->
+                    <img src="./assets/images/prince.jpg" alt="" style="border-radius: 74px;
+                    margin: 0 auto;
+                ">
+                    <!-- </div> -->
+
+
+
+                </div>
+                <div class="col-lg-4 offset-4" style="margin-top: 20px;">
+                    <input type="text" class="form-control" placeholder="User Name" [(ngModel)]="name">
+                </div>
+                <div class="col-lg-4 offset-4" style="margin-top: 20px;">
+                    <input type="text" class="form-control" placeholder="Password" [(ngModel)]="password">
+                </div>
+                <div class="col-lg-4 offset-4" style="margin-top: 20px;">
+                    <button class="btn btn-success" style="width: 100%;" (click)="login()">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

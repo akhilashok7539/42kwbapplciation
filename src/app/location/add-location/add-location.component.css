@@ -1,0 +1,49 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.page-wrapper {
+    /* margin-left: 229px !important; */
+    margin-top: 70px !important;
+}
+
+.card {
+    padding: 20px;
+}
+
+.btn {
+    background: #4caf50;
+    color: white;
+    width: 37%;
+    margin: 0 auto;
+    margin-top: 24px;
+}

@@ -1,0 +1,68 @@
+<header id="header-area" class="fixed-top">
+
+
+    <ul>
+        <!-- <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li> -->
+        <li style="float:right"><a class="active" href="#about">Logout</a></li>
+    </ul>
+
+</header>
+
+<div class="page-wrapper">
+    <div class="container">
+        <!-- <span class="close">X</span> -->
+
+        <div class="card">
+
+            <h5 style="text-align: center;font-size: 20px;">Add Property</h5>
+            <div class="row">
+                <div class="col-sm-4">
+                    <label for="">Location</label>
+                    <!-- <input type="text" class="form-control" [(ngModel)]="location"> -->
+                    <select class="form-control" [(ngModel)]="location">
+                        <option value="">Select your location</option>
+                        <option value="{{s.id}}" *ngFor="let s of reuslts">{{s.location}}</option>
+                    </select>
+
+                </div>
+                <div class="col-sm-4">
+                    <label for="">Title</label>
+                    <input type="text" class="form-control" [(ngModel)]="title">
+                </div>
+                <div class="col-sm-4">
+                    <label for="">Decription</label>
+                    <input type="text" class="form-control" [(ngModel)]="description">
+                </div>
+                <div class="col-sm-4">
+                    <label for="">Address</label>
+                    <input type="text" class="form-control" [(ngModel)]="address">
+                </div>
+                <div class="col-sm-4">
+                    <label for="">Starting Price</label>
+                    <input type="text" class="form-control" [(ngModel)]="startprice">
+                </div>
+                <div class="col-sm-4">
+                    <label for="">End Price</label>
+                    <input type="text" class="form-control" [(ngModel)]="endprice">
+                </div>
+                <div class="col-sm-4">
+                    <label for="">Property Image</label>
+                    <input class="form-control" #file type="file" (change)="propertyimageadd($event)">
+
+                </div>
+                <div class="col-sm-8"></div>
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <button (click)="submit()" class="btn btn-success" style="margin: 0 auto; display: block; border-radius: 0px;">Add Property</button>
+                </div>
+
+                <div class="col-sm-4"></div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>

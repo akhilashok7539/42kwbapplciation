@@ -1,0 +1,12 @@
+.abboutussection {
+    padding: 30px;
+}
+
+p {
+    font-family: "Nunito Sans", Arial, sans-serif;
+    background: #fff;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: gray;
+}

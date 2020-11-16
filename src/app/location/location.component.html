@@ -1,0 +1,61 @@
+<header id="header-area" class="fixed-top">
+
+
+    <ul>
+        <!-- <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li> -->
+        <li style="float:right"><a class="active" href="#about">Logout</a></li>
+    </ul>
+
+</header>
+<app-sidebar></app-sidebar>
+
+<div class="page-wrapper" style="margin-top: 33px;">
+
+
+
+
+    <div class="content">
+
+        <div class="row">
+            <div class="col-sm-4 col-3">
+                <h4 class="page-title">Properties</h4>
+
+            </div>
+
+
+            <div class="col-sm-8 col-9 text-right m-b-20">
+
+                <a class="btn btn-success float-right " style="color: white;" routerLink="/addlocation">
+                    <i class="fa fa-plus"></i> Add Location</a>
+            </div>
+        </div>
+        <!-- <button>Add</button> -->
+        <!-- <div class="container"> -->
+        <div class="container">
+
+            <mat-table #table [dataSource]="dataSource">
+
+                <ng-container matColumnDef="location">
+                    <mat-header-cell *matHeaderCellDef>Location Name </mat-header-cell>
+                    <mat-cell *matCellDef="let element "> {{element.location}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="Edit">
+                    <mat-header-cell *matHeaderCellDef>Options</mat-header-cell>
+                    <mat-cell *matCellDef="let element"> <button (click)="edit(element)" class="btn btn-success"><i class="fa fa-edit"></i> Edit</button> &nbsp;&nbsp;&nbsp;
+                        <button (click)="delete(element)" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button> </mat-cell>
+
+                </ng-container>
+
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            </mat-table>
+
+
+            <mat-paginator #paginator [length]="totalLength" [pageSize]="limit">
+            </mat-paginator>
+        </div>
+
+    </div>
+</div>
