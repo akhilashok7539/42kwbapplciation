@@ -39,6 +39,8 @@
                     <p>{{a.discription}}</p>
                     <p>Start Price {{a.startingPrize}} End Price {{a.endPrize}} </p>
                     <p>Location :{{a.location}}</p>
+                    <button class="btn btn-success" *ngIf="a.isActive == false" (click)="active(a)">Active</button>
+                    <button class="btn btn-danger" *ngIf="a.isActive == true" (click)="inactive(a)">Inactive</button>
 
                 </div>
             </div>

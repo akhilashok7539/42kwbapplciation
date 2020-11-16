@@ -39,7 +39,17 @@ export class UserserviceService {
 
   }
   submitform(req){
-    return this.http.post(this.BASEURL+'/user/feedback',req);
+    return this.http.post(this.BASEURL+'user/feedback',req);
 
   } 
+  active(s,req)
+  {
+    return this.http.put(this.BASEURL+'admin/advertisement/'+s,req);
+
+  }
+  inactive(s,req)
+  {
+    return this.http.put(this.BASEURL+'admin/advertisement/'+s,req);
+
+  }
 }
