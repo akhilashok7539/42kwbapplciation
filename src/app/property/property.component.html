@@ -15,52 +15,73 @@
         <!-- <span class="close">X</span> -->
 
         <div class="card">
+            <form [formGroup]="Propertyform">
+                <h5 style="text-align: center;font-size: 20px;">Add Property</h5>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label for="">Location</label>
+                        <!-- <input type="text" class="form-control" [(ngModel)]="location"> -->
+                        <select class="form-control" [(ngModel)]="location" formControlName="location" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.location.errors }">
+                            <option value="" disabled>Select your location</option>
+                            <option value="{{s.id}}" *ngFor="let s of reuslts">{{s.location}}</option>
+                        </select>
+                        <div *ngIf="submitted && f.location.errors" class="invalid-feedback">
+                            <div *ngIf="f.location.errors.required">Location is required</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="">Title</label>
+                        <input type="text" class="form-control" [(ngModel)]="title" formControlName="title" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
 
-            <h5 style="text-align: center;font-size: 20px;">Add Property</h5>
-            <div class="row">
-                <div class="col-sm-4">
-                    <label for="">Location</label>
-                    <!-- <input type="text" class="form-control" [(ngModel)]="location"> -->
-                    <select class="form-control" [(ngModel)]="location">
-                        <option value="">Select your location</option>
-                        <option value="{{s.id}}" *ngFor="let s of reuslts">{{s.location}}</option>
-                    </select>
+                        <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+                            <div *ngIf="f.title.errors.required">Title is required</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="">Decription</label>
+                        <input type="text" class="form-control" [(ngModel)]="description" formControlName="description" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.description.errors }">
+                        <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+                            <div *ngIf="f.description.errors.required">Decription is required</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="">Address</label>
+                        <input type="text" class="form-control" [(ngModel)]="address" formControlName="address" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.address.errors }">
+                        <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+                            <div *ngIf="f.address.errors.required">Address is required</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="">Starting Price</label>
+                        <input type="text" class="form-control" [(ngModel)]="startprice" formControlName="startprice" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.startprice.errors }">
+                        <div *ngIf="submitted && f.startprice.errors" class="invalid-feedback">
+                            <div *ngIf="f.startprice.errors.required">Starting price is required</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="">End Price</label>
+                        <input type="text" class="form-control" [(ngModel)]="endprice" formControlName="endprice" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.endprice.errors }">
+                        <div *ngIf="submitted && f.endprice.errors" class="invalid-feedback">
+                            <div *ngIf="f.endprice.errors.required">End price is required</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="">Property Image</label>
+                        <input class="form-control" #file type="file" (change)="propertyimageadd($event)" formControlName="image" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.image.errors }">
+                        <div *ngIf="submitted && f.image.errors" class="invalid-feedback">
+                            <div *ngIf="f.image.errors.required">Property Image is required</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8"></div>
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4">
+                        <button (click)="submit()" class="btn btn-success" style="margin: 0 auto; display: block; border-radius: 0px;">Add Property</button>
+                    </div>
+
+                    <div class="col-sm-4"></div>
 
                 </div>
-                <div class="col-sm-4">
-                    <label for="">Title</label>
-                    <input type="text" class="form-control" [(ngModel)]="title">
-                </div>
-                <div class="col-sm-4">
-                    <label for="">Decription</label>
-                    <input type="text" class="form-control" [(ngModel)]="description">
-                </div>
-                <div class="col-sm-4">
-                    <label for="">Address</label>
-                    <input type="text" class="form-control" [(ngModel)]="address">
-                </div>
-                <div class="col-sm-4">
-                    <label for="">Starting Price</label>
-                    <input type="text" class="form-control" [(ngModel)]="startprice">
-                </div>
-                <div class="col-sm-4">
-                    <label for="">End Price</label>
-                    <input type="text" class="form-control" [(ngModel)]="endprice">
-                </div>
-                <div class="col-sm-4">
-                    <label for="">Property Image</label>
-                    <input class="form-control" #file type="file" (change)="propertyimageadd($event)">
-
-                </div>
-                <div class="col-sm-8"></div>
-                <div class="col-sm-4"></div>
-                <div class="col-sm-4">
-                    <button (click)="submit()" class="btn btn-success" style="margin: 0 auto; display: block; border-radius: 0px;">Add Property</button>
-                </div>
-
-                <div class="col-sm-4"></div>
-
-            </div>
+            </form>
         </div>
 
 

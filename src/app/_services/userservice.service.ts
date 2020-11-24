@@ -1,12 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../../environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserserviceService {
-  BASEURL = "http://42kspaceservice-env.eba-awz4xtc8.ap-south-1.elasticbeanstalk.com/42kspace/api/v1/";
-  constructor(private http:HttpClient) { }
+  BASEURL ;
+  constructor(private http:HttpClient)
+   { 
+     this.BASEURL = environment.apiUrl;
+   }
 
   login(req)
   {

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { UserserviceService } from '../_services/userservice.service';
 
 @Component({
@@ -10,12 +11,14 @@ import { UserserviceService } from '../_services/userservice.service';
 })
 export class AdminpannelComponent implements OnInit {
   results:any=[];
-  BASEURL = "http://42kspaceservice-env.eba-awz4xtc8.ap-south-1.elasticbeanstalk.com/42kspace/api/v1/";
+  // BASEURL = "http://42kspaceservice-env.eba-awz4xtc8.ap-south-1.elasticbeanstalk.com/42kspace/api/v1/";
+  BASEURL;
 
   constructor(private userservice:UserserviceService,private router:Router,private snackbar:MatSnackBar) { }
 
   ngOnInit(): void { 
     this.getallads();
+    this.BASEURL = environment.apiUrl;
   }
   getallads()
   {

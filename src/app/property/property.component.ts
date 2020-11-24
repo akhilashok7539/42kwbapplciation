@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserserviceService } from '../_services/userservice.service';
 
@@ -11,19 +12,34 @@ export class PropertyComponent implements OnInit {
   reuslts:any=[];
   img1;
   image1;
+  image;
   formData = new FormData();
   description;
   title;
   address;
   startprice;
   endprice;
-  location;
-
-  constructor(private userservice:UserserviceService,private router:Router) { }
+  location = "";
+  Propertyform:FormGroup;
+  submitted = false;
+  constructor(private userservice:UserserviceService,private router:Router,private fb:FormBuilder) { }
 
   ngOnInit(): void {
     this.getalllocation();
+    this.Propertyform = this.fb.group(
+      {
+        title:['',Validators.required],
+        location:['',Validators.required],
+        description:['',Validators.required],
+        image:['',Validators.required],
+        address:['',Validators.required],
+        startprice:['',Validators.required],
+        endprice:['',Validators.required],
+      }
+    )
   }
+  get f() { return this.Propertyform.controls; }
+
   propertyimageadd(event)
   {
       this.img1 = event.target.files;
@@ -46,6 +62,17 @@ export class PropertyComponent implements OnInit {
   }
   submit()
   {
+    this.submitted = true;
+
+    // stop here if form is invalid
+    if (this.Propertyform.invalid) {
+      console.log("invalid");
+
+        return;
+        
+    }
+    else{
+
     this.formData.append("file",this.image1);
     this.formData.append("title",this.title);
     this.formData.append("discription",this.description);
@@ -63,6 +90,7 @@ export class PropertyComponent implements OnInit {
 
       }
     )
+  }
 
   }
 }

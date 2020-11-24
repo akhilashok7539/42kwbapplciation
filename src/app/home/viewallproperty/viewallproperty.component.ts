@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserserviceService } from 'src/app/_services/userservice.service';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-viewallproperty',
@@ -9,7 +10,7 @@ import { UserserviceService } from 'src/app/_services/userservice.service';
 })
 export class ViewallpropertyComponent implements OnInit {
   results:any = [];
-  BASEURL = "http://42kspaceservice-env.eba-awz4xtc8.ap-south-1.elasticbeanstalk.com/42kspace/api/v1/";
+  BASEURL;
   locations:any = [];
   location:any ='';
   searchString;
@@ -17,6 +18,8 @@ export class ViewallpropertyComponent implements OnInit {
   constructor(private userservice:UserserviceService,private router:Router) { }
 
   ngOnInit(): void {
+    this.BASEURL = environment.apiUrl;
+
     this.getallads();
     this.getalllocation();
   }

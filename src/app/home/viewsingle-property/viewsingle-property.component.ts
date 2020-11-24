@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-viewsingle-property',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewsinglePropertyComponent implements OnInit {
   details:any;
-  BASEURL = "http://42kspaceservice-env.eba-awz4xtc8.ap-south-1.elasticbeanstalk.com/42kspace/api/v1/";
+  BASEURL;
   discription;
   img;
   address;
@@ -19,6 +20,8 @@ export class ViewsinglePropertyComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.BASEURL = environment.apiUrl;
+
     this.details = JSON.parse(localStorage.getItem("detail"));
     this.img = this.details['fileName'];
     this.title = this.details['title'];

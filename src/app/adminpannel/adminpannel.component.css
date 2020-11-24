@@ -46,3 +46,11 @@ h6 {
 p {
     text-align: center;
 }
+
+button {
+    width: 50%;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 13px;
+}

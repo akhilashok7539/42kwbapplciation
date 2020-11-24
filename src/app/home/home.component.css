@@ -34,3 +34,46 @@ h2 {
     color: white;
     border: none;
 }
+
+
+/* @media (max-width:991px) {
+    .section {
+        margin-top: 100px;
+    }
+    h2 {
+        position: absolute;
+        font-size: 20px;
+        margin-top: -13px;
+    }
+    .btn-primary {
+        position: absolute;
+    }
+} */
+
+@media only screen and (max-width: 992px) {
+    .sections {
+        /* margin-top: 100px; */
+        margin-top: 98px;
+    }
+    h2 {
+        /* margin-top: 98px; */
+        font-size: 13px;
+    }
+    .carousel-caption {
+        top: 14%;
+        font-size: 13px;
+    }
+    p {
+        color: white;
+        font-size: 14px;
+    }
+    button {
+        width: 174px;
+        height: 47px;
+        /* padding: 35px; */
+        /* margin: 0 auto; */
+        padding-top: 10px !important;
+        background: #233e62 !important;
+        border: none !important;
+    }
+}

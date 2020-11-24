@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
 import { UserserviceService } from '../_services/userservice.service';
 
 @Component({
@@ -8,12 +9,14 @@ import { UserserviceService } from '../_services/userservice.service';
 })
 export class ProjectsComponent implements OnInit {
   reuslts;
-  BASEURL = "http://42kspaceservice-env.eba-awz4xtc8.ap-south-1.elasticbeanstalk.com/42kspace/api/v1/";
-
+  // BASEURL = "http://42kspaceservice-env.eba-awz4xtc8.ap-south-1.elasticbeanstalk.com/42kspace/api/v1/";
+  BASEURL;
   constructor(private userservice:UserserviceService) { }
 
   ngOnInit(): void {
     // this.getalllocation();
+    this.BASEURL = environment.apiUrl;
+
     this.getallproperties();
   }
   getalllocation() {

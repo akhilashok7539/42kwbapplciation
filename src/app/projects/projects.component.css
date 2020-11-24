@@ -19,3 +19,14 @@ h6 {
 p {
     text-align: center;
 }
+
+@media (max-width:991px) {
+    h2 {
+        text-align: center;
+    }
+    button {
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 11px;
+    }
+}
