@@ -29,6 +29,7 @@ import { EditLocationComponent } from './location/edit-location/edit-location.co
 import {MatTabsModule} from '@angular/material/tabs';
 import { DemoMaterialModule } from './material';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { TestcomponentComponent } from './testcomponent/testcomponent.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +50,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     FilterPipe,
     LoginComponent,
     EditLocationComponent,
+    TestcomponentComponent,
   ],
   imports: [
     BrowserModule,

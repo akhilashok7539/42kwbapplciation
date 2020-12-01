@@ -3,7 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { UserserviceService } from '../_services/userservice.service';
-
+import Swal from 'sweetalert2'
 @Component({
   selector: 'app-location',
   templateUrl: './location.component.html',
@@ -52,6 +52,11 @@ export class LocationComponent implements OnInit {
   }
   delete(s)
   {
+    // Swal.fire(
+    //   'Location Added!',
+    //   'Location Added Successfully',
+    //   'success'
+    // )
     this.userservice.delete(s.id).subscribe(
       data => {
         alert("Location Deleted Successfully");
@@ -62,6 +67,11 @@ export class LocationComponent implements OnInit {
 
       }
     )
+  }
+  logout()
+  {
+    localStorage.clear();
+    this.router.navigate(['/Home'])
   }
 }
 export interface PeriodicElement {

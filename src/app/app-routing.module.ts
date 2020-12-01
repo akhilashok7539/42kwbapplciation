@@ -12,6 +12,7 @@ import { LocationComponent } from './location/location.component';
 import { LoginComponent } from './login/login.component';
 import { PropertyComponent } from './property/property.component';
 import { ServicesComponent } from './services/services.component';
+import { TestcomponentComponent } from './testcomponent/testcomponent.component';
 
 const routes: Routes = [
   {path:'', redirectTo: '/Home', pathMatch: 'full' },
@@ -28,6 +29,7 @@ const routes: Routes = [
 
   {path:'login',component:LoginComponent},
   {path:'edit-location',component:EditLocationComponent},
+  {path:'test',component:TestcomponentComponent},
 
 
 ];
