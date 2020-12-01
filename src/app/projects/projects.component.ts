@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { UserserviceService } from '../_services/userservice.service';
 
@@ -11,7 +12,7 @@ export class ProjectsComponent implements OnInit {
   reuslts;
   // BASEURL = "http://42kspaceservice-env.eba-awz4xtc8.ap-south-1.elasticbeanstalk.com/42kspace/api/v1/";
   BASEURL;
-  constructor(private userservice:UserserviceService) { }
+  constructor(private userservice:UserserviceService,private router:Router) { }
 
   ngOnInit(): void {
     // this.getalllocation();
@@ -45,5 +46,11 @@ export class ProjectsComponent implements OnInit {
 
       }
     )
+  }
+  select(s){
+    console.log(s);
+    
+    localStorage.setItem("detail",JSON.stringify(s));
+    this.router.navigate(['/singleproperty']);
   }
 }

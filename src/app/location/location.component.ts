@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
 import { UserserviceService } from '../_services/userservice.service';
 
 @Component({
@@ -21,7 +22,7 @@ export class LocationComponent implements OnInit {
   dataSource = new MatTableDataSource();
   @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
 
-  constructor(private userservice: UserserviceService) { }
+  constructor(private userservice: UserserviceService,private router:Router) { }
 
   ngOnInit() {
     this.getalllocation();
@@ -39,6 +40,25 @@ export class LocationComponent implements OnInit {
 
       },
       error => {
+
+      }
+    )
+  }
+  edit(a){
+    console.log(a);
+    //(s)
+    sessionStorage.setItem("location",JSON.stringify(a))
+    this.router.navigate(['/edit-location'])
+  }
+  delete(s)
+  {
+    this.userservice.delete(s.id).subscribe(
+      data => {
+        alert("Location Deleted Successfully");
+
+      },
+      error => {
+        alert("Location Deleted UnSuccessfully");
 
       }
     )

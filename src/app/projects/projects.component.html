@@ -1,11 +1,11 @@
 <!-- <section> -->
 <div class="section">
 
-    <h1>Projects</h1>
+    <h1 style="text-align: center;">Projects</h1>
     <hr>
     <div class="container">
         <div style="margin-top: 20px;margin-bottom: 10px;" *ngFor="let s of reuslts">
-            <div class="row">
+            <div class="row" *ngIf="s.item.length != 0">
                 <div class="col-sm-10">
                     <h2>Projects in {{s.location}}</h2>
 
@@ -18,13 +18,24 @@
             <div class="row">
 
 
-                <div class="col-sm-3" *ngFor="let sd of s.item">
+                <div class="col-sm-12" *ngFor="let sd of s.item">
                     <div class="card">
-                        <img src="{{BASEURL}}/admin/advertisement/{{sd.fileName}}" alt="" style="height: 164px;">
-                        <h6>{{sd.title}}</h6>
-                        <p>Price {{sd.startingPrize}}-{{sd.startingPrize}} </p>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <img src="{{BASEURL}}/admin/advertisement/{{sd.fileName}}" alt="" style="    width: 100%;height: 164px;">
 
-                        <p> <i class="fa fa-map-marker"></i> Location {{sd.location}}</p>
+                            </div>
+                            <div class="col-sm-8">
+                                <h6>{{sd.title}}</h6>
+                                <!-- <hr> -->
+                                <p>Price {{sd.startingPrize}}-{{sd.startingPrize}} </p>
+
+                                <p> <i style="color: red;" class="fa fa-map-marker"></i> Location {{sd.location}}</p>
+                                <button class="btn btn-primary"><i class="fa fa-phone" aria-hidden="true"></i> Contact Us</button>
+
+                                <button class="btn btn-primary" (click)="select(sd)" style="margin-right: 10px;"><i class="fa fa-eye" aria-hidden="true"></i> View</button>
+                            </div>
+                        </div>
 
                     </div>
                 </div>

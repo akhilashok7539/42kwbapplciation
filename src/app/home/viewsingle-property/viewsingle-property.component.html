@@ -21,12 +21,29 @@
 
         </div>
         <div class="col-sm-8" style="margin-top: 100px;">
-            <h2>Property Name : {{title}}</h2>
+            <!-- <h2>Property Name : {{title}}</h2>
             <h5>Description : {{discription}}</h5>
             <h5>Address : {{address}}</h5>
             <h5>location : {{location}}</h5>
             <h5>Price : {{startingPrize}} - {{endPrize}}</h5>
-            <h5>Posted Date : {{createdAt}}</h5>
+            <h5>Posted Date : {{createdAt}}</h5> -->
+            <mat-tab-group>
+                <mat-tab label="Property">
+                    <h2>Property Name : {{title}}</h2>
+                    <img src="./assets/images/verified.png" alt="" style="width: 82px;float: right;">
+                    <h5>Address : {{address}}</h5>
+                    <h5>location : {{location}}</h5>
+                    <h5>Price : {{startingPrize}} - {{endPrize}}</h5>
+                    <h5>Posted Date : {{createdAt}}</h5>
+                </mat-tab>
+                <mat-tab label="Description">
+                    <h5>Description : {{discription}}</h5>
+                </mat-tab>
+                <mat-tab label="Contact Details">
+
+
+                </mat-tab>
+            </mat-tab-group>
         </div>
     </div>
 </section>

@@ -56,4 +56,13 @@ export class UserserviceService {
     return this.http.put(this.BASEURL+'admin/advertisement/'+s,req);
 
   }
+  editlocation(req,id)
+  {
+    return this.http.put(this.BASEURL+'admin/locations/'+id,req);
+
+  }
+  delete(s)
+  {
+    return this.http.delete(this.BASEURL+'admin/locations/'+s)
+  }
 }

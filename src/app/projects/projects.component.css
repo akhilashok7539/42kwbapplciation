@@ -1,13 +1,14 @@
 h1 {
-    text-align: center;
+    text-align: left;
 }
 
-hr {
+
+/* hr {
     width: 30%;
-}
+} */
 
 h6 {
-    text-align: center;
+    text-align: left;
     font-size: 20px;
     margin-top: 5px;
 }
@@ -17,16 +18,27 @@ h6 {
 }
 
 p {
-    text-align: center;
+    text-align: left;
 }
 
 @media (max-width:991px) {
     h2 {
-        text-align: center;
+        text-align: left;
     }
     button {
         margin: 0 auto;
         display: block;
         margin-bottom: 11px;
     }
+}
+
+.card {
+    padding: 10px;
+}
+
+.btn {
+    background: #0d1128;
+    border: none;
+    border-radius: 5px;
+    float: right;
 }

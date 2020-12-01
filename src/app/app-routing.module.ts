@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { ViewallpropertyComponent } from './home/viewallproperty/viewallproperty.component';
 import { ViewsinglePropertyComponent } from './home/viewsingle-property/viewsingle-property.component';
 import { AddLocationComponent } from './location/add-location/add-location.component';
+import { EditLocationComponent } from './location/edit-location/edit-location.component';
 import { LocationComponent } from './location/location.component';
 import { LoginComponent } from './login/login.component';
 import { PropertyComponent } from './property/property.component';
@@ -26,6 +27,8 @@ const routes: Routes = [
   {path:'singleproperty',component:ViewsinglePropertyComponent},
 
   {path:'login',component:LoginComponent},
+  {path:'edit-location',component:EditLocationComponent},
+
 
 ];
 

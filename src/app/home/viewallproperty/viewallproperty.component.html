@@ -27,8 +27,10 @@
         <div class="col-sm-3" *ngFor="let a of results | filter : 'title' : searchString; let i = index ">
             <div class="card" (click)="select(a)">
                 <img src="{{BASEURL}}/admin/advertisement/{{a.fileName}}" alt="" style="height: 164px;">
-                <h3>{{a.title}}</h3>
-                <p>{{a.discription}}</p>
+                <h3>{{a.title}} <img src="./assets/images/veri.png" alt="" style="width: 17px;"></h3>
+                <!-- <p>{{a.discription}}</p> -->
+
+
                 <p>Start Price {{a.startingPrize}} End Price {{a.endPrize}} </p>
                 <p>Location :{{a.location}}</p>
 

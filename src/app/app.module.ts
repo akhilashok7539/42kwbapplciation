@@ -25,7 +25,9 @@ import { ViewsinglePropertyComponent } from './home/viewsingle-property/viewsing
 import { LoginComponent } from './login/login.component';
 import { FilterPipe } from './_services/filter';
 import {MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS} from '@angular/material/snack-bar';
-
+import { EditLocationComponent } from './location/edit-location/edit-location.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import { DemoMaterialModule } from './material';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,16 +47,19 @@ import {MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS} from '@angular/materia
     ViewsinglePropertyComponent,
     FilterPipe,
     LoginComponent,
+    EditLocationComponent,
   ],
   imports: [
     BrowserModule,
     MatTableModule,
+    MatTabsModule,
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
     MatSnackBarModule,
     AppRoutingModule,
     MatToolbarModule,
+    DemoMaterialModule,
     BrowserAnimationsModule
   ],
   providers: [
