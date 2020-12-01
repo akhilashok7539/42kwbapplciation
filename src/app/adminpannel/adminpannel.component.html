@@ -75,8 +75,15 @@
 
                 <ng-container matColumnDef="Edit">
                     <mat-header-cell *matHeaderCellDef>Options</mat-header-cell>
-                    <mat-cell *matCellDef="let element"> <button (click)="edit(element)" class="btn btn-success"><i class="fa fa-edit"></i> Edit</button> &nbsp;&nbsp;&nbsp;
-                        <button (click)="delete(element)" class="btn btn-danger" style="width: 100px;"><i class="fa fa-trash"></i> Delete</button> </mat-cell>
+                    <mat-cell *matCellDef="let element"> <button (click)="edit(element)" class="btn btn-success"><i
+                                class="fa fa-edit"></i> Edit</button> &nbsp;&nbsp;&nbsp;
+
+                        <button class="btn btn-success" style="width: 100px;" *ngIf="element.isActive == false" (click)="active(element)"> Active</button>
+                        <button class="btn btn-danger" style="width: 100px;" *ngIf="element.isActive == true" (click)="inactive(element)"> Inactive</button>
+                        <!-- <button (click)="delete(element)" class="btn btn-danger" style="width: 100px;"><i
+                                class="fa fa-trash"></i> Delete</button> -->
+
+                    </mat-cell>
 
                 </ng-container>
 
