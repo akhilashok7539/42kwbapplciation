@@ -12,7 +12,8 @@
 
 p {
     text-align: left;
-    color: black;
+    color: rgb(224, 224, 224);
+    font-weight: bold;
     font-size: 18px;
 }
 

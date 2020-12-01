@@ -10,6 +10,8 @@
 
 </header>
 <app-sidebar></app-sidebar>
+
+
 <div class="page-wrapper" style="margin-top: 33px;">
 
 
@@ -31,7 +33,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-sm-3" *ngFor="let a of results">
                 <div class="card">
                     <img src="{{BASEURL}}/admin/advertisement/{{a.fileName}}" alt="" style="height: 164px;">
@@ -44,6 +46,47 @@
 
                 </div>
             </div>
+        </div> -->
+
+        <div class="container">
+
+            <mat-table #table [dataSource]="dataSource">
+
+                <ng-container matColumnDef="Propertname">
+                    <mat-header-cell *matHeaderCellDef>Location Name </mat-header-cell>
+                    <mat-cell *matCellDef="let element "> {{element.title}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="location">
+                    <mat-header-cell *matHeaderCellDef>Location Name </mat-header-cell>
+                    <mat-cell *matCellDef="let element "> {{element.location}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="address">
+                    <mat-header-cell *matHeaderCellDef>Address </mat-header-cell>
+                    <mat-cell *matCellDef="let element "> {{element.address}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="pricerange">
+                    <mat-header-cell *matHeaderCellDef>Price Range </mat-header-cell>
+                    <mat-cell *matCellDef="let element "> {{element.startingPrize}} - {{element.endPrize}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="img">
+                    <mat-header-cell *matHeaderCellDef>Image </mat-header-cell>
+                    <mat-cell *matCellDef="let element "><img src="{{BASEURL}}/admin/advertisement/{{element.fileName}}" alt="" style="height: 84px; width: 100px;"></mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="Edit">
+                    <mat-header-cell *matHeaderCellDef>Options</mat-header-cell>
+                    <mat-cell *matCellDef="let element"> <button (click)="edit(element)" class="btn btn-success"><i class="fa fa-edit"></i> Edit</button> &nbsp;&nbsp;&nbsp;
+                        <button (click)="delete(element)" class="btn btn-danger" style="width: 100px;"><i class="fa fa-trash"></i> Delete</button> </mat-cell>
+
+                </ng-container>
+
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            </mat-table>
+
+
+            <mat-paginator #paginator [length]="totalLength" [pageSize]="limit">
+            </mat-paginator>
         </div>
 
     </div>

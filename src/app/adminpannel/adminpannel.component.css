@@ -53,4 +53,6 @@ button {
     margin: 0 auto;
     display: block;
     margin-bottom: 13px;
+    width: 85px;
+    margin-top: 10px;
 }
