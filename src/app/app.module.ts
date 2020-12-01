@@ -28,6 +28,7 @@ import {MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS} from '@angular/materia
 import { EditLocationComponent } from './location/edit-location/edit-location.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { DemoMaterialModule } from './material';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,6 +64,7 @@ import { DemoMaterialModule } from './material';
     BrowserAnimationsModule
   ],
   providers: [
+    {provide: LocationStrategy, useClass: HashLocationStrategy},
     {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 2000}}
   ],
   bootstrap: [AppComponent],
