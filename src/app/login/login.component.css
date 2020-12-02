@@ -6,3 +6,16 @@
     margin-left: 0px;
     margin-right: 0px;
 }
+
+.card {
+    padding: 20px;
+}
+
+.btn-success {
+    border-radius: 0px;
+}
+
+input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
