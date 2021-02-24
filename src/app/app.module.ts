@@ -30,6 +30,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { DemoMaterialModule } from './material';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { TestcomponentComponent } from './testcomponent/testcomponent.component';
+import { HomeedgesComponent } from './homeedges/homeedges.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +52,7 @@ import { TestcomponentComponent } from './testcomponent/testcomponent.component'
     LoginComponent,
     EditLocationComponent,
     TestcomponentComponent,
+    HomeedgesComponent,
   ],
   imports: [
     BrowserModule,

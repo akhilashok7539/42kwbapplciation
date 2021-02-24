@@ -6,3 +6,8 @@ h3 {
 p {
     text-align: center;
 }
+
+.containers {
+    margin-left: 30px;
+    margin-right: 30px;
+}

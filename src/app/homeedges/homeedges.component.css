@@ -1,0 +1,121 @@
+@media (min-width: 1100px) {
+    .css-1e9ng7c {
+        margin-top: 17px;
+    }
+}
+
+.css-1e9ng7c {
+    width: 100%;
+    white-space: nowrap;
+    position: relative;
+    margin-top: 0;
+}
+
+.css-19kmzr4 .slider-inner {
+    padding: 0 16px;
+}
+
+.css-7nnslv {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+@media (min-width: 1100px) {
+    *,
+     ::before,
+     ::after {
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+.css-dlu4u9 {
+    position: relative;
+    -webkit-transition: 0.5s -webkit-transform;
+    -webkit-transition: 0.5s transform;
+    transition: 0.5s transform;
+    -webkit-transition: translate3d(0, 0, 0);
+    transition: translate3d(0, 0, 0);
+    height: 100%;
+}
+
+@media (min-width: 1100px) {
+    *,
+     ::before,
+     ::after {
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+.css-om3run {
+    white-space: normal;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+    transition: transform 0.5s ease 0s, opacity 300ms ease 0s;
+    opacity: 1;
+}
+
+@media (min-width: 1100px) {
+    *,
+     ::before,
+     ::after {
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+.css-shx26i {
+    font-size: 16px;
+    line-height: 24px;
+    color: #5e47dc;
+    font-weight: 500;
+    opacity: 1;
+}
+
+.css-zco33q {
+    margin-top: 4px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #4c4c4c;
+    line-height: 1.69;
+}
+
+.css-1cucynd {
+    margin-top: auto;
+    font-size: 18px;
+    line-height: 27px;
+    padding: 16px 0px;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+    text-shadow: rgb(0 0 0 / 20%) 1px 1px 1px;
+    font-weight: 500;
+    position: relative;
+}
+
+.css-1ultit7 {
+    display: block;
+    position: relative;
+    height: 170px;
+    width: 184px;
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 8px 0 rgb(0 0 0 / 18%);
+    overflow: hidden;
+    margin: 15px 12px 20px 0;
+    transition: all 0.2s;
+}
+
+.css-uwwqev {
+    width: 100%;
+    height: 100%;
+}
+
+.css-om3run {
+    white-space: normal;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+    transition: transform 0.5s ease 0s, opacity 300ms ease 0s;
+    opacity: 1;
+}

@@ -17,11 +17,11 @@ export class ViewsinglePropertyComponent implements OnInit {
   title: any;
   endPrize;
   startingPrize;
+  largerimaage;
   constructor() { }
 
   ngOnInit(): void {
     this.BASEURL = environment.apiUrl;
-
     this.details = JSON.parse(localStorage.getItem("detail"));
     this.img = this.details['fileName'];
     this.title = this.details['title'];
@@ -32,6 +32,12 @@ export class ViewsinglePropertyComponent implements OnInit {
     this.location = this.details['location'];
     this.endPrize = this.details['endPrize'];
     this.startingPrize = this.details['startingPrize'];
-  }
+    this.largerimaage = this.BASEURL+'admin/advertisement/'+this.img;
 
+  }
+  thumnail(s){
+    console.log(s);
+    this.largerimaage = s;
+    
+  }
 }

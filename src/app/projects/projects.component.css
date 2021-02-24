@@ -8,10 +8,11 @@ h1 {
 } */
 
 img {
-    margin-left: auto;
-    width: 86%;
-    height: 164px;
-    margin-right: auto;
+    margin-left: -9px;
+    width: 100%;
+    margin-top: -9px;
+    height: 169px;
+    margin-bottom: -10px;
     display: block;
 }
 

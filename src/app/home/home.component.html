@@ -1,5 +1,5 @@
 <app-header></app-header>
-
+<!-- 
 <section class="sections">
 
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -38,8 +38,98 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-</section>
+</section> -->
+
+
+
+
+<div class="s002" style=" background-image: url('assets/images/defaultBanner.a154812d.jpg')">
+    <form>
+        <!-- <fieldset>
+        <legend>SEARCH DOCTOR</legend>
+      </fieldset> -->
+
+        <div>
+            <h1 style="color: #0085B2; font-weight: 500;    margin-left: 17px;">Search Your Property</h1>
+
+            <button style="float: right;
+            margin-top: -42px;
+            margin-right: 16px;
+            background: #0085b2;
+            color: white;
+            padding: 8px;
+            border: none;
+            width: 112px;" routerLink="/viewallproperty">View All</button>
+        </div>
+        <div class="inner-form">
+            <div class="input-field third-wrap ">
+
+                <select class="form-control search-slt">
+            <option value="" disabled selected >Select a City </option>
+            <option *ngFor='let c of city' value="{{c.cityId}}" >
+              {{c.cityName}}
+            </option>
+          </select>
+
+
+
+            </div>
+            <!-- <div class="input-field second-wrap">
+
+                <select class="form-control search-slt" formControlName="category" [(ngModel)]="CategorySelected" (change)="getcategroyType(CategorySelected)">
+          <option value="" selected disabled>Select a Category</option>
+          <option *ngFor='let category of categorys' value="{{category.categoryName}}">
+            {{category.categoryName}}
+          </option>
+        </select>
+
+
+            </div> -->
+            <div class="input-field first-wrap ">
+
+
+                <!-- <input id="search" type="text" placeholder="What are you looking for?" /> -->
+                <!-- <ng-autocomplete formControlName="searchname" class="ng-autocomplete" [data]="categoryitems" id="search" [(ngModel)]="searchresults" [searchKeyword]="keyword" (selected)='selectEvent($event)' placeHolder="Search {{catselect}} here.." (inputChanged)='onChangeSearch($event)'
+                    (inputFocused)='onFocused($event)' [itemTemplate]="itemTemplate" [notFoundTemplate]="notFoundTemplate">
+                </ng-autocomplete>
+
+                <ng-template #itemTemplate let-item>
+                    <a [innerHTML]="item.key" (click)="select(item.id)"></a>
+                </ng-template>
+                <ng-template #notFoundTemplate let-notFound>
+                    <div [innerHTML]="notFound"></div>
+                </ng-template> -->
+                <input type="text" class="ng-autocomplete">
+            </div>
+
+            <div class="input-field fifth-wrap">
+                <button class="btn-search" style="background: #0085B2;border-top-right-radius: 11px;border-bottom-right-radius: 11px;" type="button" (click)="newSearch()">Search</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+<!-- *ngIf="results != 'null'"  -->
+
+
+<!-- <div class="row">
+     
+      <div class="col-sm-3">
+          <p style="padding-top: 27px;
+          margin-bottom: -33px;
+          font-weight: bold;
+          padding-left: 69px;
+          letter-spacing: 1.36px;
+          color: #8A8A8A;">Search Result</p>
+      </div>
+  </div> -->
+
+
 
 <!-- <app-aboutus></app-aboutus> -->
-<app-projects></app-projects>
+
+<app-homeedges></app-homeedges>
+<!-- <app-projects></app-projects> -->
 <app-footer></app-footer>
