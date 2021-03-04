@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserserviceService } from '../_services/userservice.service';
 
 @Component({
@@ -8,14 +9,14 @@ import { UserserviceService } from '../_services/userservice.service';
 })
 export class HomeComponent implements OnInit {
 city:any=[]
-  constructor(private userservice:UserserviceService) { }
+  constructor(private userservice:UserserviceService,private router:Router) { }
 
   ngOnInit(): void {
     this.getalllocation();
   }
   newSearch()
   {
-    
+    this.router.navigate(['/viewallproperty'])
   }
   getalllocation() {
     this.userservice.getlocation().subscribe(
