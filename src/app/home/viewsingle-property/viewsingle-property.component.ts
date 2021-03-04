@@ -18,6 +18,7 @@ export class ViewsinglePropertyComponent implements OnInit {
   endPrize;
   startingPrize;
   largerimaage;
+  mapurl;
   constructor() { }
 
   ngOnInit(): void {
@@ -33,6 +34,7 @@ export class ViewsinglePropertyComponent implements OnInit {
     this.endPrize = this.details['endPrize'];
     this.startingPrize = this.details['startingPrize'];
     this.largerimaage = this.BASEURL+'admin/advertisement/'+this.img;
+    this.mapurl = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15751.641413952559!2d76.4591213697754!3d9.252307499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b061fdff16c1395%3A0x7d0585ac06b56b11!2sNangiyarkulangara%20Kseb%20Substation!5e0!3m2!1sen!2sin!4v1614850774816!5m2!1sen!2sin';
 
   }
   thumnail(s){

@@ -1,4 +1,5 @@
 <app-header></app-header>
+
 <!-- 
 <section class="sections">
 
@@ -52,14 +53,14 @@
         <div>
             <h1 style="color: #0085B2; font-weight: 500;    margin-left: 17px;">Search Your Property</h1>
 
-            <button style="float: right;
+            <!-- <button style="float: right;
             margin-top: -42px;
             margin-right: 16px;
             background: #0085b2;
             color: white;
             padding: 8px;
             border: none;
-            width: 112px;" routerLink="/viewallproperty">View All</button>
+            width: 112px;" routerLink="/viewallproperty">View All</button> -->
         </div>
         <div class="inner-form">
             <div class="input-field third-wrap ">
@@ -67,7 +68,7 @@
                 <select class="form-control search-slt">
             <option value="" disabled selected >Select a City </option>
             <option *ngFor='let c of city' value="{{c.cityId}}" >
-              {{c.cityName}}
+              {{c.location}}
             </option>
           </select>
 
@@ -130,6 +131,6 @@
 
 <!-- <app-aboutus></app-aboutus> -->
 
-<app-homeedges></app-homeedges>
+<!-- <app-homeedges></app-homeedges> -->
 <!-- <app-projects></app-projects> -->
 <app-footer></app-footer>

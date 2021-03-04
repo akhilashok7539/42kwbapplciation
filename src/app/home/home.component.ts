@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserserviceService } from '../_services/userservice.service';
 
 @Component({
   selector: 'app-home',
@@ -7,12 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 city:any=[]
-  constructor() { }
+  constructor(private userservice:UserserviceService) { }
 
   ngOnInit(): void {
+    this.getalllocation();
   }
   newSearch()
   {
     
+  }
+  getalllocation() {
+    this.userservice.getlocation().subscribe(
+      data => {
+        this.city = data['responce'];
+       
+      },
+      error => {
+
+      }
+    )
   }
 }

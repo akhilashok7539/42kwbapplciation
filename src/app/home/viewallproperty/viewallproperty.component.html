@@ -1,4 +1,4 @@
-<app-header></app-header>
+<!-- <app-header></app-header>
 <div class="containers">
     <div class="row">
         <div class="col-sm-12" style="margin-top: 100px;text-align: center;">
@@ -28,7 +28,7 @@
             <div class="card" (click)="select(a)" style="margin-bottom: 20px;">
                 <img src="{{BASEURL}}/admin/advertisement/{{a.fileName}}" alt="" style="height: 164px;">
                 <h3>{{a.title}} <img src="./assets/images/veri.png" alt="" style="width: 17px;"></h3>
-                <!-- <p>{{a.discription}}</p> -->
+          
 
 
                 <p>Start Price {{a.startingPrize}} End Price {{a.endPrize}} </p>
@@ -40,4 +40,135 @@
         <p *ngIf="mesg == 'no data found'" style="margin: 0 auto;font-size: 30px;">No Properties Found</p>
 
     </div>
+</div> -->
+<app-header></app-header>
+<div class="row">
+    <div class="col-sm-2">
+        <select class="form-control" [(ngModel)]="location" (change)="selectedevent(location)">
+            <option value="" selected disabled>Choose Location</option>
+                <option value="{{s.id}}" *ngFor="let s of locations">{{s.location}}</option>
+        </select>
+
+    </div>
+    <div class="col-sm-2">
+        <select name="" class="form-control">
+            <option value="">Property Type</option>
+        </select>
+    </div>
+    <div class="col-sm-2">
+        <select name="" class="form-control">
+            <option value="">BHK Type</option>
+        </select>
+    </div>
+    <div class="col-sm-2">
+        <select name="" class="form-control">
+            <option value="">Price Filter</option>
+        </select>
+    </div>
+    <div class="col-sm-2">
+        <select name="" class="form-control">
+            <option value="">Possesion Status</option>
+        </select>
+    </div>
+    <div class="col-sm-2">
+        <Button style="    padding: 8px;
+        background: white;
+        border: 2px solid #0072ffbd;
+        color: #0072ffbd;">Save Filter</Button>
+    </div>
+
 </div>
+
+<div class="row" style="background-color:#f4f4f4">
+    <div class="col-sm-6">
+        <div class="row">
+            <div class="col-sm-6">
+                <p>Home/Properties</p>
+
+            </div>
+            <div class="col-sm-6">
+                <div class="css-fyid56" style="text-align: end;">Last Updated:
+                    <!-- -->{{currentdate}}
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <p style="    font-size: 14px;
+                color: black;
+                font-weight: 500">Showing 1 - 7 of 7 </p>
+            </div>
+            <div class="col-sm-6">
+                <Select style="    float: right;
+                background: #f4f4f4;padding: 7px;  border: none;">
+                    <option value="">Relevance</option>
+                    <option value="">Last 10 days</option>
+                    <option value="">Last 30 days</option>
+                    <option value="">Last 45 days</option>
+
+                </Select>
+            </div>
+
+        </div>
+
+
+        <article id="srp-0" class="css-h7k7mr" *ngFor="let a of results">
+            <div class="css-k008qs" (click)="select(a)">
+                <div class="css-3yymf1"><img src="{{BASEURL}}/admin/advertisement/{{a.fileName}}" class="img css-g3qvvk" alt="Gallery Cover Pic of Aqua City-Emperor Pool Villa"></div>
+                <div class="css-v64o2m">
+                    <div class="css-70qvj9">
+                        <div class="css-yr18fa">₹{{a.endPrize}} - {{a.endPrize}} </div><span class="css-nin1gj">EMI starts at
+                            <!-- -->₹64.48 K
+                        </span>
+                    </div>
+                    <div class="css-1ypadwk">
+                        <div class="css-0"><span data-q="shortlist-0" class="shortlistIcon css-1xo17yf"></span></div>
+                    </div>
+                    <div class="css-ltqa49">
+                        <a data-q="title" target="_blank" class="css-163eyf0" href="/in/buy/projects/page/10590-aqua-cityemperor-pool-villa-by-shwas-homes-pvt-ltd-in-aduvathuruthu">
+                            <h3 class="css-zekqfr">{{a.title}}</h3>
+                            <i class="fa fa-map-marker"></i> {{a.location}}
+                        </a>
+                    </div>
+                    <div class="css-1j62xqm">By
+                        <!-- -->
+                        <!-- -->Shwas Homes Pvt. Ltd.
+                    </div>
+                    <div data-q="address" class="css-4in8py"><a class="css-16drx2b" target="_blank" href="/in/buy/ernakulam/aduvathuruthu">Aqua City-Emperor Pool Villa,, Aduvathuruthu</a>
+                    </div>
+                    <div data-q="features" class="css-mifb2i">
+                        <div class="css-ebj250">
+                            <div class="css-16mq4qa">Configurations</div>
+                            <div class="css-1ty8tu4">4 BHK Villa</div>
+                        </div>
+                        <div class="css-ebj250">
+                            <div class="css-16mq4qa">Possession Status</div>
+                            <div class="css-1ty8tu4">Ready to Move</div>
+                        </div>
+                        <div class="css-ebj250">
+                            <div class="css-16mq4qa">Avg. Price</div>
+                            <div class="css-1ty8tu4">₹4.25 K/sq.ft</div>
+                        </div>
+                    </div>
+
+
+                    <div class="css-19yzxlt">
+                        <div data-q="seller-data" class="contact-bar css-tatn4f">
+                            <div class="thumbnail-wrapper css-1uoxvj3"><img src="https://is1-2.housingcdn.com/0b8ad14c/685d679994f8f7f1edab608b6e0de68e/v1/thumb.jpg" class="image css-10qiwim" alt="SH"></div>
+                            <div class="details css-3zjhzc">
+                                <div class="css-wni7av"><a target="_blank" class="css-0" href="/in/buy/builders/205319_shwas_homes_pvt_ltd">Shwas Homes Pvt. Ltd.</a>
+                                </div>
+                                <div class="contact-bar-subtitle css-113fu5b">Developer</div>
+                            </div><button class="cta css-149igx6">Contact</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </div>
+    <div class="col-sm-6">
+
+
+        <div class="css-f4zpzg"><img src="//c.housingcdn.com/demand/s/common/assets/desktopPinkImageSrp.9c713b1c.png" class="img css-19279c7"><img src="//c.housingcdn.com/demand/s/common/assets/desktopPurpleImage.8ab33bcf.png" class="img css-7q6shf">
+
+
+        </div>

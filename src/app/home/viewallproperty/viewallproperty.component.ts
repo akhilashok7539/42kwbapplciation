@@ -15,6 +15,7 @@ export class ViewallpropertyComponent implements OnInit {
   location:any ='';
   searchString;
   mesg: string;
+  currentdate;
   constructor(private userservice:UserserviceService,private router:Router) { }
 
   ngOnInit(): void {
@@ -22,6 +23,22 @@ export class ViewallpropertyComponent implements OnInit {
 
     this.getallads();
     this.getalllocation();
+
+
+    var d = new Date();
+    console.log(d);
+    const month = d.toLocaleString('default', { month: 'long' });
+    console.log(month);
+    console.log(d.getFullYear());
+    console.log(d.getMonth());
+    console.log(d.getDay());
+
+    this.currentdate = month+' '+d.getDay()+','+d.getFullYear();
+    console.log(this.currentdate);
+    
+    // return parts[3]+"-"+months[parts[1]]+"-"+parts[2];
+  
+    
   }
 
   getallads()

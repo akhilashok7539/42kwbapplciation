@@ -3,11 +3,299 @@ h3 {
     font-weight: bold;
 }
 
-p {
+
+/* p {
     text-align: center;
-}
+} */
 
 .containers {
     margin-left: 30px;
     margin-right: 30px;
+}
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+    background: #8080801f;
+    padding: 7px;
+}
+
+.form-control {
+    height: 42px !important;
+    background: #fff !important;
+    color: #00000047 !important;
+    font-size: 15px;
+    border-radius: 0px;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.css-fyid56 {
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.css-h7k7mr {
+    font-size: 12px;
+    background-color: #fff;
+    -webkit-transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.css-k008qs {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.css-3yymf1 {
+    position: relative;
+    width: 231px;
+    overflow: hidden;
+}
+
+.css-g3qvvk {
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    max-height: 260px;
+    cursor: zoom-in;
+    opacity: 0.9;
+}
+
+.css-v64o2m {
+    position: relative;
+    width: calc(100% - 231px);
+    padding: 16px 20px 0;
+}
+
+.css-70qvj9 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.css-yr18fa {
+    font-size: 16px;
+    font-weight: 500;
+    -webkit-letter-spacing: 0.6px;
+    -moz-letter-spacing: 0.6px;
+    -ms-letter-spacing: 0.6px;
+    letter-spacing: 0.6px;
+}
+
+.css-nin1gj {
+    cursor: pointer;
+    padding: 0 8px;
+    margin-left: 8px;
+    color: #5e23dc;
+}
+
+.css-1ypadwk {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: flex-end;
+    -webkit-box-align: flex-end;
+    -ms-flex-align: flex-end;
+    align-items: flex-end;
+    position: absolute;
+    top: 17px;
+    right: 19px;
+}
+
+@media (min-width: 1100px) {
+    .css-1xo17yf {
+        font-size: 16px;
+    }
+}
+
+.css-1xo17yf {
+    color: #e62878;
+    font-size: 20px;
+    cursor: pointer;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.css-ltqa49 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 12px;
+}
+
+.css-163eyf0 {
+    max-width: calc(100% - 90px);
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    -webkit-letter-spacing: 0.5px;
+    -moz-letter-spacing: 0.5px;
+    -ms-letter-spacing: 0.5px;
+    letter-spacing: 0.5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.css-1j62xqm {
+    margin-top: 4px;
+    color: #7f7f7f;
+}
+
+.css-4in8py {
+    margin-top: 8px;
+    -webkit-letter-spacing: 0.4px;
+    -moz-letter-spacing: 0.4px;
+    -ms-letter-spacing: 0.4px;
+    letter-spacing: 0.4px;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.css-mifb2i {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 16px;
+}
+
+.css-ebj250:first-of-type {
+    padding-left: 0;
+    border-left: none;
+}
+
+.css-16mq4qa {
+    color: #7f7f7f;
+}
+
+.css-1ty8tu4 {
+    margin-top: 2px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.css-ebj250 {
+    max-width: 33.33%;
+    padding: 0 10px;
+    border-left: solid 1px #efefef;
+}
+
+.css-16mq4qa {
+    color: #7f7f7f;
+}
+
+.css-1ty8tu4 {
+    margin-top: 2px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.css-ebj250:last-of-type {
+    padding-right: 0;
+}
+
+.css-16mq4qa {
+    color: #7f7f7f;
+}
+
+.css-1ty8tu4 {
+    margin-top: 2px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.css-19yzxlt {
+    border-top: solid 1px #ececec;
+    margin: 16px -20px 0;
+    padding: 0 20px;
+    position: relative;
+}
+
+.css-19yzxlt .contact-bar {
+    padding: 14px 0;
+}
+
+.css-tatn4f {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 13px;
+    border-radius: 3px;
+    position: relative;
+}
+
+.css-1uoxvj3 {
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+
+.css-10qiwim {
+    animation: 300ms linear 0s 1 normal none running animation-1qbobka;
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+@media (min-width: 1100px) {
+    .css-3zjhzc {
+        max-width: calc(100% - 125px);
+    }
+}
+
+.css-3zjhzc {
+    margin-left: 13px;
+    margin-right: auto;
+    max-width: calc(100% - 230px);
+}
+
+.css-149igx6 {
+    padding: 0 14px;
+    border: 1px solid #1dd38f;
+    font-size: 14px;
+    line-height: 28px;
+    color: #fff;
+    background-color: #1dd38f;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: 12px;
+    white-space: nowrap;
 }

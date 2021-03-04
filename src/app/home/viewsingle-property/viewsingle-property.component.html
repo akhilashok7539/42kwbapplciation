@@ -1,6 +1,7 @@
 <app-header></app-header>
 
 
+<!-- 
 <section>
     <div class="row">
         <div class="col-sm-4">
@@ -32,4 +33,80 @@
             </mat-tab-group>
         </div>
     </div>
-</section>
+</section> -->
+<div class="container">
+    <div class="row" style="margin-top: 10px;">
+        <div class="col-sm-6">
+            <p>Home / Aduvathuruthu /Shwas Queen Villas
+            </p>
+        </div>
+        <div class="col-sm-6">
+            <p style="text-align: end;">Last updated: Apr 20, 2019</p>
+        </div>
+        <div class="col-sm-6">
+            <img src="./assets/images/verified.png" alt="" style="width: 82px;float: right;">
+
+            <h1>{{title}}</h1>
+        </div>
+        <div class="col-sm-6">
+            <h1 style="text-align: end;">{{startingPrize}} - {{endPrize}} | ₹4.50 K/sq.ft</h1>
+            <p style="text-align: end;">EMI starts at ₹68.28 K</p>
+            <button class="btn btn-seller">Contact Seller</button>
+        </div>
+
+        <div class="col-sm-12">
+            <img src="{{BASEURL}}/admin/advertisement/{{img}}" alt="">
+        </div>
+    </div>
+    <div class="row" style="margin-top: 20px;">
+        <div class="col-sm-3">
+            <h2>4 BHK Villa
+            </h2>
+            <p style="text-align: center;">Configurations</p>
+        </div>
+        <div class="col-sm-3">
+            <h2>Ready to Move
+            </h2>
+            <p style="text-align: center;">Possession Status
+            </p>
+        </div>
+        <div class="col-sm-3">
+            <h2>₹4.50 K/sq.ft
+            </h2>
+            <p style="text-align: center;">Avg. Price</p>
+        </div>
+        <div class="col-sm-3">
+            <h2>2595 sq.ft - 3115 sq.ft
+            </h2>
+            <p style="text-align: center;">Builtup Area</p>
+        </div>
+
+    </div>
+    <hr>
+    <mat-tab-group>
+        <mat-tab label="OVERVIEW">
+
+        </mat-tab>
+        <mat-tab label="Description">
+            <h5>Description : {{discription}}</h5>
+        </mat-tab>
+        <mat-tab label="LOCALITY">
+            <!-- <iframe src="{{mapurl}}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+        </mat-tab>
+        <mat-tab label="Q&A">
+
+
+        </mat-tab>
+        <mat-tab label="DEVELOPER">
+
+
+
+        </mat-tab>
+
+
+    </mat-tab-group>
+
+
+</div>
+
+<app-footer></app-footer>
