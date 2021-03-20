@@ -38,6 +38,10 @@ h5 {
     margin-bottom: 17px;
 }
 
+.image {
+    width: 60%;
+}
+
 .btn-seller {
     padding: 0 14px;
     border: 1px solid #1dd38f;
@@ -60,4 +64,10 @@ h5 {
 
 h2 {
     text-align: center;
+}
+
+@media (max-width: 991px) {
+    .image {
+        width: 100%;
+    }
 }

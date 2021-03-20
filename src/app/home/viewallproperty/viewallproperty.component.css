@@ -60,7 +60,8 @@ h3 {
 
 .css-g3qvvk {
     object-fit: cover;
-    position: absolute;
+    /* position: absolute; */
+    position: initial;
     top: 0px;
     left: 0px;
     width: 100%;
@@ -123,6 +124,20 @@ h3 {
 @media (min-width: 1100px) {
     .css-1xo17yf {
         font-size: 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .filterbtn {
+        margin: 0 auto;
+        display: block;
+        margin-top: 10px;
+    }
+    .css-yr18fa {
+        font-size: 9px;
+    }
+    .css-nin1gj {
+        font-size: 12px;
     }
 }
 
@@ -239,6 +254,21 @@ h3 {
 
 .css-19yzxlt .contact-bar {
     padding: 14px 0;
+}
+
+.filterbtn {
+    padding: 8px;
+    background: white;
+    border: 2px solid #0072ffbd;
+    color: #0072ffbd;
+}
+
+.card {
+    font-size: 12px;
+    background-color: #fff;
+    transition: box-shadow 0.2s;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
 .css-tatn4f {
